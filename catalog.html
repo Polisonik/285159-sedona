@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>SEDONA</title>
+  </head>
+  <body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-navigator">
+                <ul>
+                    <li>
+                        <a href="#">Информация</a>
+                    </li>
+                    <li>
+                        <a href="#">Фото и видео</a>
+                    </li>
+                    <li>
+                        <a href="#">Карта штата</a>
+                    </li>
+                    <li>
+                        <a href="#">Гостиницы</a>
+                    </li>
+                </ul>
+            </nav>    
+        </div>
+    </header>   
+    <main class="container">
+    <div class="search" >
+        <section class="infrastructure">
+            <form action="https://echo.htmlacademy.ru" method="get">
+                <label>
+                    Инфраструктура:
+                    <label>
+                        <input type="checkbox" name="pool"> бассейн
+                    </label>  
+                    <label>
+                        <input type="checkbox" name="parking"> парковка
+                    </label>   
+                    <label>
+                        <input type="checkbox" name="wi-fi"> wi-fi
+                    </label>   
+                </label> 
+            </form>    
+        </section>
+        
+        <section class="rent">
+            <form action="https://echo.htmlacademy.ru" method="get">
+                <label>
+                    Тип жилья:
+                    <label>
+                        <input type="checkbox" name="hotel"> гостиница
+                    </label>  
+                    <label>
+                        <input type="checkbox" name="motel"> мотель
+                    </label>   
+                    <label>
+                        <input type="checkbox" name="apartments"> апартаменты
+                    </label>   
+                </label> 
+            </form>    
+        </section>
+        
+        <section class="cost">
+            <label> Стоимость в сутки (p): <!-- не знаю как добавить поле для ввода с отображением цены-->
+                <section>
+                <input type="" value="0">
+                <input type="" value="3000">    
+                <input type="range" min=0 max="3000" name="price">
+                </section>
+            </label>
+            <input type="button" name="show" value="показать"> 
+            
+        </section>
+    </div>
+    </main>      
+            
+    <table class="search-result">    
+        <tr>
+            <td>
+                <b>Найдено:3</b>
+            </td>    
+            <td>
+                <section class="sorting">
+                    <ul>
+                        <li>
+                            <a href="#">по цене</a>
+                        </li>
+                        <li>
+                            <a href="#">по типу</a>
+                        </li>
+                        <li>
+                            <a href="#">по рейтингу</a>
+                        </li>
+                    </ul>    
+                </section>    
+            </td>
+            <td>
+                <!-- стрелки сортировки. Как сделать? -->
+            </td>    
+        </tr>    
+        
+        <tr>
+            <td> <img src="img/amara.jpg" width="" height="" alt="Amara Resort & SPA"></td>
+            <td>
+                <div>
+                    <b class="hotel-name">amara resort & SPA</b>
+                    <p>Гостиница от 3500 р.</p>
+                    <a class="more-btn" href="#">Подробнее</a>
+                    <a class="reservation-btn" href="#">Забронировать</a>
+                </div>    
+            </td>
+            <td>
+                <div>
+                    <img src="img/star3.jpg" width="" height="" alt="3 звезды"> 
+                    <p class="rating"> рейтинг: 8,5</p>
+                </div>   
+            </td>    
+        </tr>
+        <tr>
+            <td> <img src="img/desert.jpg" width="" height="" alt="Desert Quail inn"></td>
+            <td>
+                <div>
+                    <b class="hotel-name">desert quail inn</b>
+                    <p>Гостиница от 2000 р.</p>
+                    <a class="more-btn" href="#">Подробнее</a>
+                    <a class="reservation-btn" href="#">Забронировать</a>
+                </div>    
+            </td>
+            <td>
+                <div>
+                    <img src="img/star2.jpg" width="" height="" alt="2 звезды"> 
+                    <p class="rating"> рейтинг: 8,9</p>
+                </div>   
+            </td>    
+        </tr>
+        <tr>
+            <td> <img src="img/villas.jpg" width="" height="" alt="villas at poco diablo"></td>
+            <td>
+                <div>
+                    <b class="hotel-name">villas at poco diablo</b>
+                    <p>Гостиница от 4000 р.</p>
+                    <a class="more-btn" href="#">Подробнее</a>
+                    <a class="reservation-btn" href="#">Забронировать</a>
+                </div>    
+            </td>
+            <td>
+                <div>
+                    <img src="img/star3.jpg" width="" height="" alt="3 звезды"> 
+                    <p class="rating"> рейтинг: 9,2</p>
+                </div>   
+            </td>    
+            
+        </tr>
+    </table>    
+      
+            
+            
+ <footer class="main-footer">
+        <div class="container">
+            <section class="footer-inst">    
+                <a class="" href="#">#VISITSEDONA</a>   
+            </section>     
+            <section class="footer-social">
+                <a class="social-btn social-btn-tw" href="#">Twitte</a>
+                <a class="social-btn social-btn-fb" href="#">Facebook</a>
+                <a class="social-btn social-btn-plya" href="#">???</a> <!-- не знаю, что за значок ( -->
+            </section>
+          <section class="footer-copyright">
+            <a class="logo-htmlacademy" href="https://htmlacademy.ru">
+                website by <img src="img/logo-htmlacademy.gpj" alt="Логотим HTML Academy">
+            </a>
+          </section>
+        </div>
+      </footer>        
+            
+   
+  </body>
+</html>
