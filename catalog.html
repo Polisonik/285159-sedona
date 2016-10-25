@@ -4,176 +4,155 @@
     <meta charset="utf-8">
     <title>SEDONA</title>
   </head>
+  
   <body>
-    <header class="main-header">
-        <div class="container">
-            <nav class="main-navigator">
-                <ul>
-                    <li>
-                        <a href="#">Информация</a>
-                    </li>
-                    <li>
-                        <a href="#">Фото и видео</a>
-                    </li>
-                    <li>
-                        <a href="#">Карта штата</a>
-                    </li>
-                    <li>
-                        <a href="#">Гостиницы</a>
-                    </li>
-                </ul>
-            </nav>    
-        </div>
-    </header>   
-    <main class="container">
-    <div class="search" >
-        <section class="infrastructure">
-            <form action="https://echo.htmlacademy.ru" method="get">
-                <label>
-                    Инфраструктура:
-                    <label>
-                        <input type="checkbox" name="pool"> бассейн
-                    </label>  
-                    <label>
-                        <input type="checkbox" name="parking"> парковка
-                    </label>   
-                    <label>
-                        <input type="checkbox" name="wi-fi"> wi-fi
-                    </label>   
-                </label> 
-            </form>    
-        </section>
-        
-        <section class="rent">
-            <form action="https://echo.htmlacademy.ru" method="get">
-                <label>
-                    Тип жилья:
-                    <label>
-                        <input type="checkbox" name="hotel"> гостиница
-                    </label>  
-                    <label>
-                        <input type="checkbox" name="motel"> мотель
-                    </label>   
-                    <label>
-                        <input type="checkbox" name="apartments"> апартаменты
-                    </label>   
-                </label> 
-            </form>    
+    <main class="container"> 
+    <header>
+      <nav class="main-navigator">
+        <ul>
+          <li>
+            <a href="#"> Информация </a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="#">Гостиница</a>
+          </li>
+        </ul>
+      </nav>
+      <img src="img/logo.jpg" width="" height="" alt="логотип" >
+    </header>
+    
+    <div class="filter">
+      <section class="infrastructure">
+        <h3>Инфраструктура:</h3> 
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label>
+            <input type="checkbox" name="pool"> бассейн
+          </label>  
+          <label>
+            <input type="checkbox" name="parking"> парковка
+          </label>   
+          <label>
+            <input type="checkbox" name="wi-fi"> wi-fi
+          </label> 
+        </form>    
+      </section>
+      
+      <section class="rent">
+        <h3>Тип жилья:</h3>     
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label>
+            <input type="checkbox" name="hotel"> гостиница
+          </label>  
+          <label>
+            <input type="checkbox" name="motel"> мотель
+          </label>   
+          <label>
+            <input type="checkbox" name="apartments"> апартаменты
+          </label>   
+        </form>    
         </section>
         
         <section class="cost">
-            <label> Стоимость в сутки (p): <!-- не знаю как добавить поле для ввода с отображением цены-->
-                <section>
-                <input type="" value="0">
-                <input type="" value="3000">    
-                <input type="range" min=0 max="3000" name="price">
-                </section>
-            </label>
-            <input type="button" name="show" value="показать"> 
-            
+          <h3>Стоимость в сутки (p):</h3> <!-- нужно ли в div класть поля для воода цены -->
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <input type="number" value="0">
+            <input type="number" value="3000">    
+            <input type="range" min=0 max="3000" name="price">
+          </form>
         </section>
-    </div>
-    </main>      
-            
-    <table class="search-result">    
-        <tr>
-            <td>
-                <b>Найдено:3</b>
-            </td>    
-            <td>
-                <section class="sorting">
-                    <ul>
-                        <li>
-                            <a href="#">по цене</a>
-                        </li>
-                        <li>
-                            <a href="#">по типу</a>
-                        </li>
-                        <li>
-                            <a href="#">по рейтингу</a>
-                        </li>
-                    </ul>    
-                </section>    
-            </td>
-            <td>
-                <!-- стрелки сортировки. Как сделать? -->
-            </td>    
-        </tr>    
         
-        <tr>
-            <td> <img src="img/amara.jpg" width="" height="" alt="Amara Resort & SPA"></td>
-            <td>
-                <div>
-                    <b class="hotel-name">amara resort & SPA</b>
-                    <p>Гостиница от 3500 р.</p>
-                    <a class="more-btn" href="#">Подробнее</a>
-                    <a class="reservation-btn" href="#">Забронировать</a>
-                </div>    
-            </td>
-            <td>
-                <div>
-                    <img src="img/star3.jpg" width="" height="" alt="3 звезды"> 
-                    <p class="rating"> рейтинг: 8,5</p>
-                </div>   
-            </td>    
-        </tr>
-        <tr>
-            <td> <img src="img/desert.jpg" width="" height="" alt="Desert Quail inn"></td>
-            <td>
-                <div>
-                    <b class="hotel-name">desert quail inn</b>
-                    <p>Гостиница от 2000 р.</p>
-                    <a class="more-btn" href="#">Подробнее</a>
-                    <a class="reservation-btn" href="#">Забронировать</a>
-                </div>    
-            </td>
-            <td>
-                <div>
-                    <img src="img/star2.jpg" width="" height="" alt="2 звезды"> 
-                    <p class="rating"> рейтинг: 8,9</p>
-                </div>   
-            </td>    
-        </tr>
-        <tr>
-            <td> <img src="img/villas.jpg" width="" height="" alt="villas at poco diablo"></td>
-            <td>
-                <div>
-                    <b class="hotel-name">villas at poco diablo</b>
-                    <p>Гостиница от 4000 р.</p>
-                    <a class="more-btn" href="#">Подробнее</a>
-                    <a class="reservation-btn" href="#">Забронировать</a>
-                </div>    
-            </td>
-            <td>
-                <div>
-                    <img src="img/star3.jpg" width="" height="" alt="3 звезды"> 
-                    <p class="rating"> рейтинг: 9,2</p>
-                </div>   
-            </td>    
-            
-        </tr>
-    </table>    
-      
-            
-            
- <footer class="main-footer">
-        <div class="container">
-            <section class="footer-inst">    
-                <a class="" href="#">#VISITSEDONA</a>   
-            </section>     
-            <section class="footer-social">
-                <a class="social-btn social-btn-tw" href="#">Twitte</a>
-                <a class="social-btn social-btn-fb" href="#">Facebook</a>
-                <a class="social-btn social-btn-plya" href="#">???</a> <!-- не знаю, что за значок ( -->
-            </section>
-          <section class="footer-copyright">
-            <a class="logo-htmlacademy" href="https://htmlacademy.ru">
-                website by <img src="img/logo-htmlacademy.gpj" alt="Логотим HTML Academy">
-            </a>
-          </section>
+        <a class="btn" href="#" ></a> <!--"показать" в этом случае кнопка или ссылка -->
+    </div>
+    
+    <div class="sort-result">
+      <h3>Найдено: 3</h3>  
+      <div class="sorting">
+        <h4>Cортировка</h4>
+          <ul>
+            <li>
+              <a href="#">по цене</a>
+            </li>
+            <li>
+              <a href="#">по типу</a>
+            </li>
+            <li>
+              <a href="#">по рейтингу</a>
+            </li>
+          </ul>    
+      </div>
+      <div>
+        <img src="img/sort-up.png">
+        <img src="img/sort-down.png"> 
+      </div>  
+    </div>
+    
+    <div class="sort-result">
+      <img src="img/amara.jpg" width="" height="" alt="Amara Resort & SPA">
+        <div class="sort-result-hotel">
+          <h4 class="hotel-name">amara resort & SPA</h4>
+          <p>Гостиница от 3500 р.</p>
+          <a class="btn" href="#">Подробнее</a>
+          <a class="btn" href="#">Забронировать</a>
+        </div>  
+        <div class="sort-result-rating">
+          <img src="img/star3.jpg" width="" height="" alt="3 звезды"> 
+          <p> рейтинг: 8,5</p>
+        </div>     
+    </div>
+    
+    <div class="sort-result">
+      <img src="img/desert.jpg" width="" height="" alt="Desert Quail inn">
+        <div class="sort-result-hotel">
+          <h4 class="hotel-name">desert quail inn</h4>
+          <p>мотель от 2000 р.</p>
+          <a class="btn" href="#">Подробнее</a>
+          <a class="btn" href="#">Забронировать</a>
+        </div>  
+        <div class="sort-result-rating">
+          <img src="img/star2.jpg" width="" height="" alt="2 звезды"> 
+          <p > рейтинг: 8,9</p>
+        </div>     
+    </div>
+    
+    <div class="sort-result">
+      <img src="img/villas.jpg" width="" height="" alt="villas at poco diablo">
+        <div class="sort-result-hotel">
+          <h4 class="hotel-name">villas at poco diablo</h4>
+          <p>Апартаменты от 4000 р.</p>
+          <a class="btn" href="#">Подробнее</a>
+          <a class="btn" href="#">Забронировать</a>
+        </div>              
+        <div class="sort-result-rating">
+          <img src="img/star3.jpg" width="" height="" alt="3 звезды"> 
+          <p> рейтинг: 9,2</p>
+        </div>     
+    </div>
+    
+    <footer class="main-footer">
+      <div class="footer-contacts">
+        <div class="footer-inst">
+          <a href="#">#VISITSEDONA</a>
         </div>
-      </footer>        
-            
-   
+        <div class="footer-social">
+          <a class="social-btn social-btn-tw" href="#">Twitter</a>
+          <a class="social-btn social-btn-fs" href="#">Facebook</a> 
+          <a class="social-btn social-btn-youtu" href="#">Youtube</a> 
+        </div>
+        <div class="footer-copyright">
+          <a class="footer-logo" href="#">
+            website by <img src="img/logo-htmlacademy.jpg" alt="Логотим HTML Academy">  
+          </a>
+        </div>
+      </div>
+      
+    </footer>
+    
+    </main>
   </body>
 </html>

@@ -4,170 +4,141 @@
     <meta charset="utf-8">
     <title>SEDONA</title>
   </head>
+  
   <body>
-    <header class="main-header">
-        <div class="container">
-            <nav class="main-navigator">
-                <ul>
-                    <li>
-                        <a href="#">Информация</a>
-                    </li>
-                    <li>
-                        <a href="#">Фото и видео</a>
-                    </li>
-                    <li>
-                        <a href="#">Карта штата</a>
-                    </li>
-                    <li>
-                        <a href="#">Гостиницы</a>
-                    </li>
-                </ul>
-            </nav>    
-        </div>
-    </header>   
-    <main class="container">
-      
-        <div>
-            <img src="img/index-logo.png" width="300" height="200" alt="Welcome to the gorgeous SEDONA">
-        </div>  
-            <h2 class="index-title" > Cедона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <div>
-            <p class="">Рассмотрим 5 причин, ко которым Седона круче, чем Гранд Каньон</p>
-        </div>
-        
-        <div class="reason">
-            <section class="reason-content"> 
-                <div class="reason-item">
-                    <b class="reason-name">Настоящий городок</b>
-                    <div class="reason-number">- №1-
-                    </div>
-                    <p >Седона - не аттракцион для туристов, там течет своя жизнь</p>
-                </div>
-            </section>
-        
-        <!-- Как правильно разместить картинку?-->
-            <div class="reason-photo">
-                <img src="img/city.jpg" width="" height="" alt="Настоящий городок">
-            </div>
-              
-            <section class="reason-content">   
-                <div class="reason-item">
-                    <div class="reason-picture">
-                        <img src="img/build.png"> <!--Возможно ли это изображение сделать в CSS? -->
-                    </div>    
-                    <b class="reason-name">Жилье</b>
-                    <p>Рекомендуем пожить в настоящем мотеле, вск как в кино!</p>
-                </div>
-            </section>
-        
-            <section class="reason-content">  
-                <div class="reason-item">
-                    <div class="reason-picture">
-                        <img src="img/burger.png"> 
-                    </div>    
-                    <b class="reason-name">Еда</b>
-                    <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                </div>
-            </section> 
-        
-            <section class="reason-content">   
-                <div class="reason-item">
-                    <div class="reason-picture">
-                        <img src="img/souvenir.png"> 
-                    </div>    
-                    <b class="reason-name">Cувениры</b>
-                    <p>Не только китайского, но и местного производства!</p>
-                </div>
-            </section>   
-        
-            <div class="reason-photo">
-                <img src="img/bridge.jpg" width="" height="" alt="Мост">
-            </div>
-               
-            <section class="reason-content"> 
-                <div class="reason-item">
-                    <b class="reason-name">Там есть мост дьявола</b>
-                    <div class="reason-number">- №2-
-                     </div>
-                    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-                </div>
-            </section>
-        
-            <section class="reason-content"> 
-                <div class="reason-item">
-                    <b class="reason-name">Небольшая площадь</b>
-                    <div class="reason-number">- №3-
-                    </div>
-                    <p>Все достопримечательности находятся очень близко</p>
-                </div>
-            </section>
-        
-            <section class="reason-content"> 
-                <div class="reason-item">
-                    <b class="reason-name">Красивая дорога</b>
-                    <div class="reason-number">- №4-
-                    </div>
-                    <p>Ехать в Седону из Лас-Вегаса совсем не сучно!</p>
-                </div>
-            </section>
-        
-            <section class="reason-content"> 
-                <div class="reason-item">
-                    <b class="reason-name">Мало туристов</b>
-                    <div class="reason-number">- №5-
-                    </div>
-                    <p>Большинство едет в Гранд Каньон и толпится там</p>
-                </div>
-            </section>
-        </div>
-        <div class="map">
-            <!-- как подключить изображение карты?-->
-        </div>    
-    <div class="search-hotel">  
-        <b class="index-title"> Заинтересовались?</b>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне </p>
-        <div class="serch-hotel-form">
-            <b class="serch-hotel-title">Поиск гостиниц в Седоне</b>
-            <form action="https://echo.htmlacademy.ru" method="get">
-                <label>
-                    Дата заезда <input type="date" name="arrival date" > <!-- как вывести иконку календаря? -->
-                </label>
-                <label>
-                    Дата выезда <input type="date" name="departure date" > <!-- как вывести иконку календаря? -->
-                </label>    
-                <label>
-                    Взрослые <input type="number" min=0 name="adult"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
-                </label>
-                <label>
-                    Дети <input type="number" min="0" name="children"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
-                </label>   
-                <input type="button" name="find" value="Найти" >    
-            </form>    
-        </div>    
+    <main class="container"> 
+    <header>
+      <nav class="main-navigator">
+        <ul>
+          <li>
+            <a href="#"> Информация </a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="#">Гостиница</a>
+          </li>
+        </ul>
+      </nav>
+      <img src="img/logo.jpg" width="" height="" alt="логотип" >
+    </header>
+    
+    <div class="greeting">
+      <img src="img/welcome.svg" alt="Welcome to SEDONA">
+      <div class="greeting-title">
+        <h2>Cедона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p>Рассмотрим 5 причин, ко которым Седона круче, чем Гранд Каньон</p>
+      </div>
     </div>
-            
-    </main>
-            
-    <!-- Футер --> 
-            
-    <footer class="main-footer">
-        <div class="container">
-            <section class="footer-inst">    
-                <a class="" href="#">#VISITSEDONA</a>   
-            </section>     
-            <section class="footer-social">
-                <a class="social-btn social-btn-tw" href="#">Twitte</a>
-                <a class="social-btn social-btn-fb" href="#">Facebook</a>
-                <a class="social-btn social-btn-plya" href="#">???</a> <!-- не знаю, что за значок ( -->
-            </section>
-          <section class="footer-copyright">
-            <a class="logo-htmlacademy" href="https://htmlacademy.ru">
-                website by <img src="img/logo-htmlacademy.gpj" alt="Логотим HTML Academy">
-            </a>
-          </section>
+    
+    <div class="reason">
+      <div class="reason first">
+        <h3>Настоящий городок</h3>
+        <p>- №1-</p> 
+        <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>  
+        <img src="img/city.jpg" width="" height="" alt="Настоящий городок">
+      </div>
+      
+      <div class="reason-list">
+        <div class="reason-content">
+          <img src="img/build.png" width="" height="" alt="здание">
+          <h3 class="reason-name"> Жилье</h3>
+          <p>Рекомендуем пожить в настоящем мотеле, вск как в кино!</p>
         </div>
-      </footer>        
+         
+        <div class="reason-content">
+          <img src="img/burger.png" width="" height="" alt="бургер">
+          <h3 class="reason-name"> Еда</h3>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div> 
+        
+        <div class="reason-content">
+          <img src="img/souvenir.png" width="" height="" alt="сувениры">
+          <h3 class="reason-name"> Cувениры</h3>
+          <p>Не только китайского, но и местного производства!</p>
+        </div> 
+      </div>
+        
+      <div class="reason second">
+        <img src="img/bridge.jpg" width="" height="" alt="Мост">       
+        <h3>Там есть мост дьявола</h3>
+        <p>- №2-</p> 
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>  
+      </div>
+      
+      <div class="reason-list">
+        <div class="reason-content">
+          <h3 class="reason-name">Небольшая площадь</h3>
+          <p>-№3-</p> 
+           <p>Все достопримечательности находятся очень близко</p>
+        </div>   
+     
+        <div class="reason-content">
+          <h3 class="reason-name">Красивая дорога</h3>
+          <p>-№4-</p> 
+          <p>Ехать в Седону из Лас-Вегаса совсем не сучно!</p>
+        </div>   
             
-   
+        <div class="reason-content">
+          <h3 class="reason-name">Мало туристов</h3>
+          <p>-№5-</p> 
+          <p>Большинство едет в Гранд Каньон и толпится там</p> 
+        </div>
+      </div>  
+    </div>
+  
+      <div class="hotel">
+      <img src="img/map.jpg" width="" height="" alt="Карта">    
+      <h2 class="hotel-title">Заинтересовались?</h2>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <div class="hotel-search">
+        <a href="#">Поиск гостиниц в Седоне</a> 
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div class="data-arrival">
+              <label>
+                Дата заезда <input type="date" name="arrival date" > 
+              </label>
+            </div>
+            <div class="date-departure">
+              <label>
+                Дата выезда <input type="date" name="departure date" > <!-- как вывести иконку календаря? -->
+              </label>   
+            </div>
+            <div class="guests-number">
+              <label>
+                Взрослые <input type="number" min=0 name="adult"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
+              </label>
+              <label>
+                Дети <input type="number" min="0" name="children"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
+              </label>   
+            </div>    
+            <input type="button" name="find" value="Найти" >    
+          </form>    
+      </div>
+    </div>
+    
+    <footer class="main-footer">
+      <div class="footer-contacts">
+        <div class="footer-inst">
+          <a href="#">#VISITSEDONA</a>
+        </div>
+        <div class="footer-social">
+          <a class="social-btn social-btn-tw" href="#">Twitter</a>
+          <a class="social-btn social-btn-fs" href="#">Facebook</a> 
+          <a class="social-btn social-btn-youtu" href="#">Youtube</a> 
+        </div>
+        <div class="footer-copyright">
+          <a class="footer-logo" href="#">
+            website by <img src="img/logo-htmlacademy.jpg" alt="Логотим HTML Academy">  
+          </a>
+        </div>
+      </div>
+      
+    </footer>
+    </main>
   </body>
 </html>
