@@ -92,17 +92,17 @@ h3 {
 .reason-content1 {
   float: left;
   background-color: darkorange;
-  width: 300px;
+  width: 400px;
   min-height: 100px;
-  margin-left: 65px;
+  margin-left: 0px;
  
 }  
 .reason-content1:last-child1 {
   float: left;
   background-color: darkorange;
-  width: 300px;
+  width: 400px;
   min-height: 100px;
-  margin-left: 65px;
+  margin-left: 0px;
 }  
 
 .reason-second-image{
@@ -122,17 +122,17 @@ h3 {
 .reason-content2 {
   float: left;
   background-color: darkorange;
-  width: 300px;
+  width: 400px;
   min-height: 100px;
-  margin-left: 65px;
+  margin-left: 0px;
  
 }  
 .reason-content2:last-child {
   float: left;
   background-color: darkorange;
-  width: 300px;
+  width: 400px;
   min-height: 100px;
-  margin-left: 65px;
+  margin-left: 0px;
 }  
 
 
@@ -175,7 +175,7 @@ h3 {
 }
 
 .footer-social {
-  background-color:crimson;
+  background-color: crimson;
   float: left;
   width: 356px;
   margin-left: 88px;
@@ -190,4 +190,75 @@ h3 {
   margin-right: 73px;
   /* Только для оформления сетки */
   min-height: 90px;
+}
+
+.filter {
+  background-color: chartreuse;
+  width: 1200px;  
+  min-height: 70px; 
+  } 
+
+.filter-infrastructure {
+  background-color: beige;
+  float:left;
+  width: 241px;
+  min-height: 60px;
+  margin-left: 73px;
+}
+
+.filter-rent {
+  background-color:beige;
+  float: left;
+  width: 288px;
+  min-height: 60px;
+  /*margin-left: 0px; */
+}
+
+.filtet-cost {
+  background-color: beige;
+  float: right;;
+  width: 328px;
+  min-height: 60px;
+  margin-left: 200px; 
+}
+
+.hotel-selected {
+  width: 1200px;
+  min-height: 150px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotel-selected:last-child {
+  width: 1200px;
+  min-height: 150px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+.hotel-selected-img {
+  background-color: burlywood;
+  float: left;
+  width: 135px;
+  margin-left: 73px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.hotel-selected-info {
+  background-color: azure;
+  float: left;
+  width: 394px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.hotel-selected-rating {
+  background-color: darkkhaki;
+  float: right;
+  min-height: 90px;
+  margin-top: 30px;
+  margin-bottom: 30px;  
+  margin-right: 73px;
 }
