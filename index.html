@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>SEDONA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css" href="css/normalize.css"> 
   </head>
   
   <body>
     <div class="container"> 
-      <header>
-        <nav class="main-navigator">
+      <header class="main-header">
+        <nav class="main-navigation">
           <ul>
             <li>
               <a href="#"> Информация </a>
@@ -21,106 +23,123 @@
               <a href="#">Карта штата</a>
             </li>
             <li>
-              <a href="#">Гостиница</a>
+              <a href="catalog.html">Гостиница</a>
             </li>
           </ul>
         </nav>
       
         <div class="logo-image">
-          <img src="img/logo.png" width="" height="" alt="логотип" >
+          <img src="img/logo.png" width="138px" height="" alt="логотип" >
         </div>  
       </header>
    
    
-      <main class="main-page"> 
+      <main class="main-content"> 
         <div class="greeting">
           <div class="greeting-img"> 
             <img src="img/welcome.png" alt="Welcome to SEDONA">
           </div>  
-          <div class="greeting-title">
-            <h2>Cедона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-            <p>Рассмотрим 5 причин, ко которым Седона круче, чем Гранд Каньон</p>
-          </div>
+        </div> 
+         
+        <div class="greeting-tagline">
+          <h2>Cедона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p>Рассмотрим 5 причин, ко которым Седона круче, чем Гранд Каньон</p>
         </div>
+        
     
-        <div class="reason clearfix">
-          <div class="reason-first ">
-            <h3>Настоящий городок</h3>
-            <p>- №1-</p> 
-            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+        <div class="features clearfix">
+          <div class="features-city">
+            <div class="features-city-container"> 
+              <h3>Настоящий <br> городок</h3>
+              <span>- №1-</span> 
+              <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            </div>  
           </div>    
-          <div class="reason-first-image">
-            <img src="img/reason1.jpg" width="800" height="256" alt="Настоящий городок">
+          <div class="features-city-image">
+            <img src="img/city.jpg" width="512" height="256" alt="Настоящий городок">
           </div>      
         </div>
       
-        <div class="reason-list clearfix">
-          <div class="reason-content1">
-            <div class="reason-content1-image">
-              <img src="img/build.png" width="76" height="70" alt="здание">
-            </div>
-            <h3 class="reason-name"> Жилье</h3>
-            <p>Рекомендуем пожить в настоящем мотеле, вск как в кино!</p>
+        <div class="features clearfix">
+          <div class="features-icon">
+            <div class="features-icon-container"> 
+              <div class="features-icon-image">
+                <img src="img/building.png" width="76" height="70" alt="здание">
+              </div>
+              <h3 class="features-name"> Жилье</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </div>  
           </div>
          
-          <div class="reason-content1">
-            <div class="reason-content1-image">
-              <img src="img/burger.png" width="76" height="70" alt="бургер">
+          <div class="features-icon">
+            <div class="features-icon-container"> 
+              <div class="features-icon-image">
+                <img src="img/burger.png" width="76" height="70" alt="бургер">
+              </div>  
+              <h3 class="features-name"> Еда</h3>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>  
-            <h3 class="reason-name"> Еда</h3>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </div> 
         
-          <div class="reason-content1">
-            <div class="reason-content1-image">
-              <img src="img/souvenir.png" width="76" height="70" alt="сувениры">
+          <div class="features-icon">
+            <div class="features-icon-container">  
+              <div class="features-icon-image">
+                <img src="img/souvenir.png" width="76" height="70" alt="сувениры">
+              </div>  
+              <h3 class="features-name"> Cувениры</h3>
+              <p>Не только китайского, но и местного производства!</p>
             </div>  
-            <h3 class="reason-name"> Cувениры</h3>
-            <p>Не только китайского, но и местного производства!</p>
           </div> 
         </div>
         
-        <div class="reason clearfix">
-          <div class="reason-second-image">
-            <img src="img/reason2.jpg" width="800" height="256" alt="Мост">       
+        <div class="features clearfix">
+          <div class="features-bridge-image">
+            <img src="img/bridge.jpg" width="512" height="256" alt="Мост">       
           </div>
-          <div class="reason-second">   
-            <h3>Там есть мост дьявола</h3>
-            <p>- №2-</p> 
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>  
+          <div class="features-bridge">   
+            <div class="features-bridge-container" >
+              <h3>Там есть мост дьявола</h3>
+              <p>- №2-</p> 
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p> 
+            </div>   
           </div>
         </div>
       
-        <div class="reason-list clearfix">
-          <div class="reason-content2">
-            <h3 class="reason-name">Небольшая площадь</h3>
-            <p>-№3-</p> 
-            <p>Все достопримечательности находятся очень близко</p>
+        <div class="features clearfix">
+          <div class="features-text">
+            <div class="features-text-container"> 
+              <h3 class="features-title">Небольшая площадь</h3>
+              <p>-№3-</p> 
+              <p>Все достопримечательности находятся очень близко</p>
+            </div>
           </div>   
      
-          <div class="reason-content2">
-            <h3 class="reason-name">Красивая дорога</h3>
-            <p>-№4-</p> 
-            <p>Ехать в Седону из Лас-Вегаса совсем не сучно!</p>
+          <div class="features-text">
+            <div class="features-text-container"> 
+              <h3 class="features-title">Красивая дорога</h3>
+              <p>-№4-</p> 
+              <p>Ехать в Седону из Лас-Вегаса совсем не сучно!</p>
+            </div>  
           </div>   
           
-          <div class="reason-content2">
-            <h3 class="reason-name">Мало туристов</h3>
-            <p>-№5-</p> 
-            <p>Большинство едет в Гранд Каньон и толпится там</p> 
+          <div class="features-text">
+            <div class="features-text-container"> 
+              <h3 class="features-title">Мало туристов</h3>
+              <p>-№5-</p> 
+              <p>Большинство едет в Гранд Каньон и толпится там</p> 
+            </div>  
           </div>
         </div>  
         
   
-        <div class="hotel">
-          <h2 class="hotel-title">Заинтересовались?</h2>
+        <div class="search">
+          <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
-        <div class="img-map"> 
-          <img src="img/map.jpg" width="1200" height="595" alt="Карта">    
-        </div>
-        <div class="hotel-search">
+        <div class="hotel">
           <a href="#">Поиск гостиниц в Седоне</a> 
+        </div>  
+        <div class="form-search"> 
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="hotel-search-data">
               <label for="date arrival">Дата заезда</label>
@@ -139,25 +158,28 @@
             <button type="submit">Найти</button>
           </form> 
         </div>
+        <div class="map">
+          <img src="img/map.jpg" width="768" height="472" alt="карта">
+        </div>
       </main>
       
       
-      <footer class="main-footer clearfix">
-        <div class="footer-inst">
-          <a href="#">#VISITSEDONA</a>
-        </div>
-        <div class="footer-social">
-          <a class="social-btn social-btn-tw" href="#">Twitter</a>
-          <a class="social-btn social-btn-fs" href="#">Facebook</a> 
-          <a class="social-btn social-btn-yt" href="#">YT</a> 
-        </div>
-        <div class="footer-copyright">
-          <a class="footer-logo" href="#">website by 
-          <!--<div class="logo-academy">  -->
-            <img src="img/logo-htmlacademy.png" width="118" height="44" alt="Логотим HTML Academy">  <!--можно ли внутри <a> ставить <div>, если нет, как обернутль логотип?-->
-            <!--</div> -->
-          </a>
-        </div>
+      <footer class="main-footer">
+        <div class="container clearfix"> 
+          <div class="footer-inst">
+            <a href="#">#VISITSEDONA</a>
+          </div>
+          <div class="footer-social">
+            <a class="social-btn social-btn-tw" href="#">Twitter</a>
+            <a class="social-btn social-btn-fs" href="#">Facebook</a> 
+            <a class="social-btn social-btn-yt" href="#">YT</a> 
+          </div>
+          <div class="footer-copyright">
+            <a class="footer-copyright" href="#">website by 
+              <img src="img/academy.png" width="118" height="44" alt="Логотим HTML Academy">  
+            </a>
+          </div>
+        </div>  
       </footer>
     </div>
   </body>
