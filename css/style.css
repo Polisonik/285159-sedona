@@ -5,7 +5,6 @@ html, body {
 }
 
 body{
-  width: 1200px;
   font-size: 14px;
   line-height: 21px;
   font-family: "PT Sans", "Arail", sans-serif;
@@ -14,9 +13,7 @@ body{
   
   text-transform: uppercase;
   
-  margin-left: auto;
-  margin-right: auto; 
- }
+}
 
 .clearfix::after {
   content: "";
@@ -30,7 +27,7 @@ body{
   margin-right: auto;
   width: 1200px;  
   background-color: #ffffff;
-  box-shadow: 0 0 20px #333333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-header {
@@ -92,16 +89,27 @@ body{
 }
 
 .greeting{
-  background: #e4f2fb url("../img/background.jpg") no-repeat;
+  background: #e4f2fb url("../img/background.jpg") no-repeat; 
   padding-top: 1px;
   padding-bottom: 1px;
   margin-bottom: 61px;
+  position: relative;
+  z-index: 1;
 }
 
-/*.greeting::after {
-  content: "";
-  background: #000000 url("../img/indention.png") no-repeat;
-}*/
+  .greeting::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;  
+    content: "";
+    
+    width: 1200px;
+    height: 57px;
+    background:  url("../img/indention.png") no-repeat; 
+    z-index: 2; 
+}
 
 .greeting-img{
   width: 458px;
@@ -175,6 +183,10 @@ body{
   min-height: 256px;
 } 
 
+.features-image img {
+  display: block;
+}
+ 
 .attribute {
   width: 1200px;
   background-color: #ffffff;
@@ -297,11 +309,12 @@ body{
 }
 
 .search-form {
+  position: absolute;  
   width: 568px;
-  position: absolute;
   left: 316px;
   background-color: #ffffff;
   border: none;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
   
   font-size: 14px;
   line-height: 26px;
@@ -309,6 +322,11 @@ body{
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
+}
+
+.search-form input{
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .search-form-arrival input{
@@ -326,10 +344,21 @@ body{
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
-  color: #000000;
+  font-weight: inherit;
+  color: inherit;
   text-transform: uppercase;
+      
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position:  100% 0px; 
+}  
+
+.search-form-arrival input:hover {
+  background-color: #ebebeb;
   
-  background-color: #f2f2f2;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position:  100% -76px;
 }
 
 .search-form-arrival label{  
@@ -351,10 +380,22 @@ body{
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
-  color: #000000;
+  font-weight: inherit;
+  color: inherit;
   text-transform: uppercase;
   
-  background-color: #f2f2f2;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position:  100% 0px;
+}
+
+.search-form-departure input:hover {
+  background-color: #ebebeb;
+  
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position:  100% -76px;
+
 }
 
 .search-form-departure label {
@@ -365,11 +406,15 @@ body{
 .search-form-adult {
   display: inline-block;
   vertical-align: top; 
+    position: relative; 
+
+  
 }
 
 .search-form-children {
   display: inline-block;
   vertical-align: top;  
+  
 }
 
 .search-form-adult input {
@@ -377,15 +422,28 @@ body{
   width: 115px;
   padding: 6px 36px;
   margin-right: 54px;
-  
+    
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
-  color: #000000;
+  font-weight: inherit;
+  color: inherit;
   text-transform: uppercase;
+  text-align: center;
   
-  background-color: #f2f2f2;
-  
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 -292px;
+}
+      
+
+
+.search-form-adult input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .search-form-adult label {
@@ -398,16 +456,32 @@ body{
   width: 115px;
   padding: 6px 36px;
   margin-bottom: 54px;
-  margin-right: 54px;  
+  margin-right: 54px; 
+  position:relative;
   
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
-  color: #000000;
+  font-weight: inherit;
+  color: inherit;
   text-transform: uppercase;
+  text-align: center;
   
-  background-color: #f2f2f2;
-}
+  }
+
+.search-form-children::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 3px;
+  background-position: -8px -309px;
+} 
+
 
 .search-form-children label {
   margin-right: 23px;
@@ -429,11 +503,7 @@ body{
   background-color: #669ec0;
 }
 
-/*.map{
-  position:relative;
-} */
-
-.main-footer {
+.footer-layer {
   color: #000000;
   background-color: #ffffff;
   text-align: center;
@@ -467,7 +537,7 @@ body{
   margin-top: 40px;
 }
 
-.main-footer a{
+.footer-layer a{
   color: #000000; 
   text-decoration: none;
 }
@@ -476,6 +546,11 @@ body{
   display: inline-block;
   vertical-align: middle;
 }
+
+ .map {
+  position: relative;
+} 
+
 
 .social-btn {
   display: inline-block;
@@ -506,19 +581,19 @@ body{
 .social-btn-tw::before {
   width: 17px;
   height: 15px;
-  background-position: -8px -119px;
+  background-position: -8px -447px;
 }
 
 .social-btn-fb::before {
   width: 10px;
   height: 19px;
-  background-position: -8px -8px;
+  background-position: -8px -198px;
 }
 
 .social-btn-yt::before {
   width: 20px;
   height: 16px;
-  background-position: -8px -150px;
+  background-position: -8px -447px;
 }
 
 /*------------------------------------------------------*/
@@ -526,6 +601,7 @@ body{
 .filter {
   background: #e4f2fb url("../img/filter.jpg") no-repeat;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .filter h3{
@@ -561,51 +637,378 @@ body{
   width: 241px;
   margin-left: 72px; 
 }
+/*------------замена инидкатора у списка инфраструктура------ */
 
+.pool-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.pool-checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.pool-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -122px;
+} 
+
+.pool-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -233px;
+}   
+
+
+.parking-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.parking-checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.parking-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -122px;
+} 
+
+.parking-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -233px;
+}   
+
+
+.wifi-checkbox input[type="checkbox"] {
+  display: none;
+}
+.wifi-checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.wifi-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -122px;
+} 
+
+.wifi-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -233px;
+}   
+
+/*------------замена инидкатора у списка тип жилья ------ */
+
+.hotel-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.hotel-checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.hotel-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -122px;
+} 
+
+.hotel-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -233px;
+}   
+
+.motel-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.motel-checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.motel-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -122px;
+} 
+
+.motel-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -233px;
+}   
+
+.apartments-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.apartments-checkbox {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.apartments-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -122px;
+} 
+
+.apartments-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  background-position: -8px -233px;
+}   
+
+
+/*------------------------------------------------------- */
 .filter-rent{
   float: left;
   width: 288px;
 }
 
-.filtet-cost {
+.filter-cost {
   float: right;
   width: 328px;
   margin-right: 72px;
-}
-
-.option-price input{
-  font-size: 14px;
-  line-height: 21px;
+  
   font-family: "PT Sans", "Arail", sans-serif;
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
   
-  width: 318px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  border: 2px solid #ffffff;
-  background-color: transparent;
-  margin-bottom: 10px;
 }
 
+.filter-cost-title {
+  margin-top: 29px;
+  margin-bottom: 9px;
+  
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  
+}
+
+.option-price {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+  
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  color: #ffffff;
+  
+  font-size:0;
+}  
+
+.option-price::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+}
+
+.option-price label {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 38px;
+  cursor: pointer;
+}
+
+.filter-cost .min-price,
+.filter-cost .max-price {
+  
+  width: 90px;
+  padding-left: 65px;
+  
+}
+.option-price input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  
+  background: none;
+  border: none;
+  outline: none;
+}
+  
+.scroll-price {
+  position:relative; 
+  margin-bottom:  32px;
+}
+
+.scroll-price .scale {
+  height: 2px;
+  background:  rgba(255, 255, 255, 0.3); 
+}
+
+.scroll-price .bar {
+  width: 252px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab; 
+  
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  left: 242px;
+}
+
+.toggle:hover {
+  background: #1c4f80;
+}
+ 
 .scroll-price input {
   width: 318px;
   color: #ffffff;
   margin-bottom: 22px;
-}
+} 
 
 .btn-show {
   width: 133px;
   padding: 4px 35px;
-  
+   
   font-size: 14px;
   line-height: 21px;
-  
+   
   margin: 0 96px;
-  
+   
   border: 2px solid #ffffff;
   background-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
 } 
+
+.btn-show:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 
 .sorting {
   box-sizing: border-box;
@@ -614,23 +1017,41 @@ body{
   padding-right: 72px;
 }
 .sorting h3 {
+  display: inline-block;
+  vertical-align: top;
   margin: 0;
-  width: 117px;
+  padding: 0;
   font-size: 21px;
   line-height: 26px;
   padding-top: 33px;
   padding-bottom: 33px;
+  margin-right: 30px;
 }
 
 .sorting h4{
   display: inline-block;
   vertical-align: top;
-  margin: 0;
-  width: 117px;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 12px;
+  line-height: 18px;
   padding-top: 33px;
   padding-bottom: 33px;
+}
+
+.sorting-result {
+   display: inline-block;
+  
+}
+
+.sorting-result ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sorting-result li{
+  display: inline;
+}
+.sorting-result-direction {
+  
 }
 
 /* ------------------------------------------ */
@@ -689,10 +1110,11 @@ body{
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
- 
+  
   color: #ffffff;
   background-color: #81b3d2;
 }
+
 .btn-more:hover {
   background-color: #669ec0;
 }
@@ -704,11 +1126,11 @@ body{
   padding-top: 5px;
   padding-bottom: 6px;
   margin-right: 6px;
-  
+   
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
- 
+  
   color: #ffffff;
   background-color: #766357;
 }
@@ -728,38 +1150,139 @@ body{
 /*----------- sprite -----------------------------------*/
 
 .sprite {
-    background-image: 
+    background-image: url(spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }
 
-.sprite-f {
+.sprite-calendar {
+    width: 21px;
+    height: 22px;
+    background-position: -8px -8px;
+}
+
+.sprite-calendard {
+    width: 21px;
+    height: 22px;
+    background-position: -8px -46px;
+}
+
+.sprite-calendarh {
+    width: 21px;
+    height: 22px;
+    background-position: -8px -84px;
+}
+
+.sprite-checkbox {
+    width: 22px;
+    height: 22px;
+    background-position: -8px -122px;
+}
+
+.sprite-checkboxd {
+    width: 22px;
+    height: 22px;
+    background-position: -8px -160px;
+}
+
+.sprite-fb {
     width: 10px;
     height: 19px;
-    background-position: -8px -8px;
+    background-position: -8px -198px;
 }
 
 .sprite-marker {
     width: 26px;
     height: 22px;
-    background-position: -8px -43px;
+    background-position: -8px -233px;
 }
 
-.sprite-rectangle {
-    width: 22px;
+.sprite-markerd {
+    width: 26px;
     height: 22px;
-    background-position: -8px -81px;
+    background-position: -8px -271px;
 }
 
-.sprite-t {
+.sprite-minus {
+    width: 12px;
+    height: 3px;
+    background-position: -8px -309px;
+}
+
+.sprite-minusd {
+    width: 12px;
+    height: 3px;
+    background-position: -8px -328px;
+}
+
+.sprite-minush {
+    width: 12px;
+    height: 3px;
+    background-position: -8px -347px;
+}
+
+.sprite-plus {
+    width: 11px;
+    height: 11px;
+    background-position: -8px -366px;
+}
+
+.sprite-plusd {
+    width: 11px;
+    height: 11px;
+    background-position: -8px -393px;
+}
+
+.sprite-plush {
+    width: 11px;
+    height: 11px;
+    background-position: -8px -420px;
+}
+
+.sprite-tw {
     width: 17px;
     height: 15px;
-    background-position: -8px -119px;
+    background-position: -8px -447px;
+}
+
+.sprite-triangledown {
+    width: 11px;
+    height: 10px;
+    background-position: -8px -478px;
+}
+
+.sprite-triangledownd {
+    width: 11px;
+    height: 10px;
+    background-position: -8px -504px;
+}
+
+.sprite-triangledownh {
+    width: 11px;
+    height: 10px;
+    background-position: -8px -530px;
+}
+
+.sprite-triangleup {
+    width: 11px;
+    height: 10px;
+    background-position: -8px -556px;
+}
+
+.sprite-triangleupd {
+    width: 11px;
+    height: 10px;
+    background-position: -8px -582px;
+}
+
+.sprite-triangleuph {
+    width: 11px;
+    height: 10px;
+    background-position: -8px -608px;
 }
 
 .sprite-yt {
     width: 20px;
     height: 16px;
-    background-position: -8px -150px;
+    background-position: -8px -634px;
 }
-

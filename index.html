@@ -124,44 +124,46 @@
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <div class="search-form-arrival">
               <label for="data arrival">Дата заезда</label>
-              <input id="data arrival" type="text" name="arrival date" > 
+              <input id="data arrival" type="text" name="arrival date" value="24 апреля 2016"> 
             </div>              
             <div class="search-form-departure">
               <label for="data departure">Дата выезда</label>
-              <input id="data departure" type="text" name="departure date" > <!-- как вывести иконку календаря? -->
+              <input id="data departure" type="text" name="departure date"  value="4 июля 2016"> 
             </div>              
             <div class="search-form-adult">
               <label for="adult-number">Взрослые</label>
-              <input id="adult-number" type="text" min=0 name="adult"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
+              <input id="adult-number" type="text" name="adult" value="2"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
             </div>
             <div class="search-form-children">  
               <label for="children-number">Дети</label>
-              <input id="children-number" type="text" min="0" name="children"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
+              <input id="children-number" type="text" name="children" value="0"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
             </div>
             <button class ="btn btn-search" type="btn">Найти</button>
           </form>  
         </div>
         
-        <div class="map">
-          <img src="img/map.jpg" width="1200" height="" alt="карта">
-        </div>
       </main>
       
       
       <footer class="main-footer clearfix">
-        <div class="footer-inst">
-          <a class="instagrfm" href="#">#visitsedona</a>
+        <div class="map">
+           <img src="img/map.jpg" width="1200" height="593" alt="карта">
         </div>
-        <div class="footer-social">
-          <a class="social-btn social-btn-tw" href="#">Twitter</a>
-          <a class="social-btn social-btn-fb" href="#">Facebook</a> 
-          <a class="social-btn social-btn-yt" href="#">YT</a> 
-        </div>
-        <div class="footer-copyright">
-          <a  href="#">website by</a>
-          <a  href="#"><img src="img/academy.png" width="118" height="44" alt="Логотим HTML Academy">  
-          </a>
-        </div>
+        <div class="footer-layer">
+          <div class="footer-inst">
+            <a class="instagrfm" href="#">#visitsedona</a>
+          </div>
+          <div class="footer-social">
+            <a class="social-btn social-btn-tw" href="#">Twitter</a>
+            <a class="social-btn social-btn-fb" href="#">Facebook</a> 
+            <a class="social-btn social-btn-yt" href="#">YT</a> 
+          </div>
+          <div class="footer-copyright">
+            <a  href="#">website by</a>
+            <a  href="#"><img src="img/academy.png" width="118" height="44" alt="Логотим HTML Academy">  
+            </a>
+          </div>
+        </div>  
       </footer>
       
     </div>

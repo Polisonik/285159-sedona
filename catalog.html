@@ -43,16 +43,22 @@
             <div class="filter-infrastructure-check">
               <ul> 
                 <li>
-                  <input id="ch-pool" type="checkbox" name="pool"> 
-                  <label for="ch-pool">бассейн</label>
+                  <label class="pool-checkbox">
+                    <input type="checkbox" name="pool">
+                    <span class="checkbox-indicator"></span>бассейн
+                  </label>
                 </li>    
                 <li>
-                  <input id="ch-parking" type="checkbox" name="parking"> 
-                  <label for="ch-parking">парковка</label>   
+                  <label class="parking-checkbox">
+                    <input type="checkbox" name="parking">
+                    <span class="checkbox-indicator"></span>парковка
+                  </label>
                 </li>
                 <li>  
-                  <input id="ch-wifi" type="checkbox" name="wi-fi"> 
-                  <label for="ch-wifi">wi-fi</label> 
+                  <label class="wifi-checkbox">
+                    <input type="checkbox" name="wifi">
+                    <span class="checkbox-indicator"></span>wi-fi
+                  </label>
                 </li>  
               </ul>
             </div>
@@ -63,34 +69,52 @@
             <div class="filter-rent-check">  
               <ul> 
                 <li>
-                  <input id="ch-hotel" type="checkbox" name="hotel"> 
-                  <label for="ch-hotel">гостиница</label>  
+                  <label class="hotel-checkbox">
+                    <input type="checkbox" name="hotel">
+                    <span class="checkbox-indicator"></span> 
+                    гостиница
+                  </label>
+                </li>
+                <li>
+                  <label class="motel-checkbox">
+                    <input type="checkbox" name="motel">
+                    <span class="checkbox-indicator"></span> 
+                    мотель
+                  </label>
                 </li>
                 <li>  
-                  <input id="ch-motel" type="checkbox" name="motel"> 
-                  <label for="ch-motel">мотель</label>   
-                </li>  
-                <li> 
-                  <input id="ch-apartments" type="checkbox" name="apartments"> апартаменты
-                  <label>апартаменты</label>
+                  <label class="apartments-checkbox">
+                    <input type="checkbox" name="apartments">
+                    <span class="checkbox-indicator"></span> 
+                    апартаменты
+                  </label>
                 </li>  
               </ul>  
             </div>   
           </section>
           
-          <section class="filtet-cost">
-            <h3>Стоимость в сутки (p):</h3> 
+          <section class="filter-cost">
+            <div class="filter-cost-title">Стоимость в сутки (p):</div> 
             <div class="option-price">
-              <input type="text" name="range-price">
+              <label class="min-price">от
+                <input type="text" name="mn-price" value="0">
+              </label>
+              <label class="max-price">до
+                <input type="text" name="mx-price" value="3000">
+              </label>    
             </div>
             <div class="scroll-price">   
-              <input type="range" name="scroll"> 
-            </div>
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>  
             <button class="btn btn-show" type="submit">Показать</button>
           </section>
         </form>
             
-        <div class="sorting">
+        <div class="sorting clearfix">
           <h3>Найдено: 3</h3>  
           <h4>Cортировка</h4>
           <div class="sorting-result">
@@ -172,6 +196,7 @@
       </main>
     
     <footer class="main-footer clearfix">
+      <div class="footer-layer">    
         <div class="footer-inst">
           <a class="instagrfm" href="#">#visitsedona</a>
         </div>
@@ -185,7 +210,8 @@
           <a  href="#"><img src="img/academy.png" width="118" height="44" alt="Логотим HTML Academy">  
           </a>
         </div>
-      </footer>
+      </div> 
+    </footer>
       
     </div>
   </body>
