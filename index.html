@@ -29,7 +29,9 @@
         </nav>
       
         <div class="logo-image">
-          <img src="img/logo.png" width="138px" height="" alt="логотип" >
+          <a href="index.html">
+            <img src="img/logo.png" width="138px" height="" alt="логотип" >
+          </a>  
         </div>  
       </header>
    
@@ -121,25 +123,27 @@
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="btn" href="#">Поиск гостиницы в Седоне</a> 
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <div class="search-form-arrival">
-              <label for="data arrival">Дата заезда</label>
-              <input id="data arrival" type="text" name="arrival date" value="24 апреля 2016"> 
-            </div>              
-            <div class="search-form-departure">
-              <label for="data departure">Дата выезда</label>
-              <input id="data departure" type="text" name="departure date"  value="4 июля 2016"> 
-            </div>              
-            <div class="search-form-adult">
-              <label for="adult-number">Взрослые</label>
-              <input id="adult-number" type="text" name="adult" value="2"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
-            </div>
-            <div class="search-form-children">  
-              <label for="children-number">Дети</label>
-              <input id="children-number" type="text" name="children" value="0"> <!-- Как сделать кнопочки "+" и "-" сбоку? -->
-            </div>
-            <button class ="btn btn-search" type="btn">Найти</button>
-          </form>  
+          <div class="modal-window">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="search-form-arrival">
+                <label for="data arrival">Дата заезда</label>
+                <input id="data arrival" type="text" name="arrival date" value="24 апреля 2016"> 
+              </div>              
+              <div class="search-form-departure">
+                <label for="data departure">Дата выезда</label>
+                <input id="data departure" type="text" name="departure date"  value="4 июля 2016"> 
+              </div>              
+              <div class="search-form-adult">
+                <label for="adult-number">Взрослые</label>
+                <input id="adult-number" type="text" name="adult" value="2"> 
+              </div>
+              <div class="search-form-children">  
+                <label for="children-number">Дети</label>
+                <input id="children-number" type="text" name="children" value="0"> 
+              </div>
+              <button class ="btn btn-search" type="btn">Найти</button>
+            </form>
+          </div>    
         </div>
         
       </main>
@@ -160,8 +164,7 @@
           </div>
           <div class="footer-copyright">
             <a class="text-by" href="#">website by</a>
-            <a class="academy-logotip" href="#" ></a>
-            
+            <a class="academy-logotip" href="#"></a>
           </div>
         </div>  
       </footer>

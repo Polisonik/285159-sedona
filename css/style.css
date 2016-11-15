@@ -48,7 +48,6 @@ body{
 }
 
 .main-navigation {
-  position: relative;
   width: 1200px;
 }
 
@@ -78,9 +77,7 @@ body{
   color: #000000; 
   text-decoration: none;
 }
-.main-navigation a:hover {
-  color: #81b3d2;
-}
+
 
 .main-navigation li:nth-child(2){
   box-sizing: border-box;
@@ -97,12 +94,13 @@ body{
   box-sizing: border-box;
   padding-left: 132px;
 }
-.main-navigation .active {
-  
+
+.main-navigation a:hover {
+  color: #81b3d2;
 }
 
-.main-navigation a:not([href]) {
-  color: #b2b2b2;
+.main-navigation a:active {
+  color: #cccccc;
 }
 
 .greeting{
@@ -115,18 +113,18 @@ body{
   z-index: 1;
 }
 
-  .greeting::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 2px;
-    left: 0;  
-    content: "";
+.greeting::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0;  
+  content: "";
     
-   width: 1200px;
-    height: 57px;
-    background:  url("../img/indention.png") no-repeat; 
-    z-index: 2; 
+  width: 1200px;
+  height: 57px;
+  background:  url("../img/indention.png") no-repeat; 
+  z-index: 2; 
 }
 
 .greeting-img{
@@ -329,7 +327,7 @@ body{
   cursor: pointer;
 }
 
-.search-form {
+.modal-window {
   position: absolute;  
   width: 568px;
   left: 316px;
@@ -346,14 +344,33 @@ body{
   z-index: 20;
 }
 
-.search-form input{
+.modal-window input{
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid transparent;
+  
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
 }
 
-.search-form input:focus {
+.modal-window input:focus {
   background: #ffffff;
   border: 2px solid #e5e5e5;
+  outline: none;
+}
+.search-form-arrival input:focus{ 
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position:  100% -38px; 
+}
+
+.search-form-departure input:focus {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position:  100% -38px; 
 }
 
 .search-form-arrival input{
@@ -368,13 +385,6 @@ body{
   margin-bottom: 30px;
   margin-right: 54px;
     
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  text-transform: uppercase;
-      
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position:  100% 0px; 
@@ -404,13 +414,6 @@ body{
   margin-bottom: 30px;
   margin-right: 54px;
   
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  text-transform: uppercase;
-  
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position:  100% 0px;
@@ -422,7 +425,6 @@ body{
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position:  100% -76px;
-
 }
 
 .search-form-departure label {
@@ -433,7 +435,7 @@ body{
 .search-form-adult {
   display: inline-block;
   vertical-align: top; 
-    position: relative; 
+  text-align: center;
 }
 
 .search-form-adult input:hover {
@@ -447,7 +449,7 @@ body{
 .search-form-children {
   display: inline-block;
   vertical-align: top;  
-  
+  text-align: center;
 }
 
 .search-form-adult input {
@@ -456,29 +458,11 @@ body{
   padding: 6px 36px;
   margin-right: 54px;
     
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  text-transform: uppercase;
-  text-align: center;
-  
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: 0 -292px;
+  background-position: 0 -309px;
 }
       
-
-
-.search-form-adult input::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .search-form-adult label {
   margin-left: 54px;
   margin-right: 40px;
@@ -490,31 +474,7 @@ body{
   padding: 6px 36px;
   margin-bottom: 54px;
   margin-right: 54px; 
-  position:relative;
-  
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  text-transform: uppercase;
-  text-align: center;
-  
-  }
-
-.search-form-children::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 3px;
-  background-position: -8px -309px;
-} 
-
+}
 
 .search-form-children label {
   margin-right: 23px;
@@ -534,22 +494,16 @@ body{
   margin-left: auto;
   margin-right:auto;
   margin-bottom: 55px;
-  z-index: 29;
+  
 }
-
-/* .btn-search::after {
-  content: "";
-  position: absolute;
-  top:0;
-  left: 0;
-  z-index: 30;
-  width: 458px;
-  height: 62px;
-  background: rgba(84, 150, 189, 0.3);
-} */
  
 .btn-search:hover {
   background-color: #669ec0;
+}
+
+.btn-search:active {
+  background-color: #5496bd;
+  color: #86b5d0;
 }
 
 .main-footer{
@@ -569,6 +523,11 @@ body{
   text-align: center;
 } 
 
+.footer-content a{
+  color: #000000; 
+  text-decoration: none;
+}
+
 .footer-inst {
   float: left;
   width: 400px;
@@ -585,7 +544,6 @@ body{
   text-align: center;
   margin-top: 36px;
   margin-bottom: 36px;
- 
 }
 
 .footer-copyright{
@@ -595,25 +553,29 @@ body{
   font-size: 14px;
   line-height: 26px;
   margin-top: 40px;
-  
-};
-
-.academy-logotip {
-  display: inline-block;
-  vertical-align: middle;
-  width: 113px;
-  height: 39px;
-  background: url("../img/academy.png") no-repeat;
-  
-}
-
-.footer-content a{
-  color: #000000; 
-  text-decoration: none;
 }
 
 .footer-copyright a{
+  display: inline-block;
   vertical-align: middle;
+}
+
+.academy-logotip {
+  width: 113px;
+  height: 39px;
+  background: url("../img/academy.png") no-repeat;
+}
+
+.academy-logotip:hover {
+  width: 113px;
+  height: 39px;
+  background: url("../img/academyhvr.png") no-repeat;
+}
+
+.academy-logotip:active {
+  width: 113px;
+  height: 39px;
+  background: url("../img/academydwn.png") no-repeat;
 }
 
 .social-btn {
@@ -642,18 +604,17 @@ body{
   background-color: #669ec0;
 }
 
-.social-btn social-btn-fb a:not([href]) {
-  display: inline-block;
-  vertical-align: top;
-  width: 46px;
-  height: 48px;
-  font-size: 0;
-  margin: 0 6px;
-  background-color: rgba(84, 150, 189, 0.3);  
-  position: relative;
+.social-btn:active {
+  background: #5496bd;
 }
 
 .social-btn-tw::before {
+  width: 17px;
+  height: 15px;
+  background-position: -8px -447px;
+}
+
+.social-btn-tw::active {
   width: 17px;
   height: 15px;
   background-position: -8px -447px;
@@ -668,29 +629,90 @@ body{
 .social-btn-yt::before {
   width: 20px;
   height: 16px;
-  background-position: -8px -447px;
+  background-position: -8px -634px;
 }
 
 /*---------------------- catalog.html --------------------------------*/
 
+/*----------------------навигатор-------------------- */
+.inner-navigation {
+  width: 1200px;
+}
+
+.inner-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 72px;
+  margin-right: 72px;
+  font-size: 0;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.inner-navigation li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 211px;
+}
+
+.inner-navigation a {
+  font-size: 14px;
+  line-height: 26px; 
+  font-weight: 700; 
+  color: #a4978f; 
+  text-decoration: none;
+}
+
+.inner-navigation li:nth-child(2){
+  box-sizing: border-box;
+  margin-right: 211px; 
+  padding-left: 30px;
+}
+
+.inner-navigation li:nth-child(3){
+  box-sizing: border-box;
+  padding-left: 93px;
+}
+
+.inner-navigation li:nth-child(4){
+  box-sizing: border-box;
+  padding-left: 132px;
+}
+
+.inner-navigation a:hover {
+  color: #958982;
+}
+
+.inner-navigation a:active {
+  color: #e5e1df;
+}
+
+/*----------------------Фильтр-------------------------*/
 .filter {
   background: #e4f2fb url("../img/filter.jpg") no-repeat;
   color: #ffffff;
   text-transform: uppercase;
 }
-
-.filter h3{
+.characteristic {
+  float: left;
+  width: 241px;
+  margin-left: 72px; 
+}
+.characteristic h3{
   margin: 0;
   padding: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   
-  padding-top: 33px;
-  padding-bottom: 29px;
+  margin-top: 33px;
+  margin-bottom: 29px;
 }
 
-.filter ul{
+.characteristic ul{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -699,19 +721,15 @@ body{
   padding-bottom: 32px;
 }
 
-.filter li {
+.characteristic li {
   padding-bottom: 29px;
 }
 
-.filter li:last-child {
+.characteristic li:last-child {
   padding-bottom: 0;
 }
 
-.filter-infrastructure {
-  float: left;
-  width: 241px;
-  margin-left: 72px; 
-}
+
 /*------------замена инидкатора у списка инфраструктура------ */
 
 .pool-checkbox input[type="checkbox"] {
@@ -719,31 +737,25 @@ body{
 }
 
 .pool-checkbox {
-  position: relative;
   padding-left: 40px;
   cursor: pointer;
+  position: relative;
 }
 
-.pool-checkbox input[type="checkbox"] + .checkbox-indicator {
+.pool-checkbox input[type="checkbox"]+ .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 12%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;
   width: 26px;
   height: 22px;
   background-position: -8px -122px;
 } 
-
-.pool-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+.pool-checkbox input[type="checkbox"]:checked + .checkbox-indicator
 {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0px;
+  left: 0px;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   width: 26px;
@@ -751,8 +763,7 @@ body{
   background-position: -8px -233px;
 }   
 
-
-.parking-checkbox input[type="checkbox"] {
+.parking-checkbox input[type="checkbox"]  {
   display: none;
 }
 
@@ -764,26 +775,20 @@ body{
 
 .parking-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;;
   width: 26px;
   height: 22px;
   background-position: -8px -122px;
 } 
 
-.parking-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+.parking-checkbox input[type="checkbox"]:checked + .checkbox-indicator
 {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;
   width: 26px;
   height: 22px;
   background-position: -8px -233px;
@@ -801,26 +806,20 @@ body{
 
 .wifi-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;;
   width: 26px;
   height: 22px;
   background-position: -8px -122px;
 } 
 
-.wifi-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+.wifi-checkbox input[type="checkbox"]:checked + .checkbox-indicator
 {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;
   width: 26px;
   height: 22px;
   background-position: -8px -233px;
@@ -840,29 +839,23 @@ body{
 
 .hotel-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;;
   width: 26px;
   height: 22px;
   background-position: -8px -122px;
+ 
 } 
 
-.hotel-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
-{
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+.hotel-checkbox input[type="checkbox"]:checked + .checkbox-indicator {   position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;
   width: 26px;
   height: 22px;
   background-position: -8px -233px;
+  
 }   
 
 .motel-checkbox input[type="checkbox"] {
@@ -877,26 +870,20 @@ body{
 
 .motel-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 12%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;;
   width: 26px;
   height: 22px;
   background-position: -8px -122px;
 } 
 
-.motel-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
+.motel-checkbox input[type="checkbox"]:checked + .checkbox-indicator
 {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;
   width: 26px;
   height: 22px;
   background-position: -8px -233px;
@@ -914,30 +901,24 @@ body{
 
 .apartments-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 8%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;;
   width: 26px;
   height: 22px;
   background-position: -8px -122px;
 } 
 
-.apartments-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after 
-{
+.apartments-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
   position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  background: url("../img/sprite.png") no-repeat;
   width: 26px;
   height: 22px;
   background-position: -8px -233px;
 }   
+  
 
 
 /*------------------------- градация цены------------------------------ */
@@ -1160,8 +1141,24 @@ body{
   margin-right: 12px;
 }
 
+.up:hover {
+  color: #000000;
+}
+
+.up:active {
+  color: #82b4d2;
+}
+
 .down{
   color: #81b3d2;
+}
+
+.down:hover{
+  color: #000000;
+}
+
+.down:active{
+  color: #82b4d2;
 }
 
 .raiting-star{
@@ -1182,6 +1179,7 @@ body{
   padding-left: 72px;
   padding-right: 72px;
   border-top: 1px solid #e5e5e5;
+  
 }
 
 .hotel-selected:last-child {
@@ -1203,18 +1201,31 @@ body{
 
 .hotel-selected-info {
   float: left;
-  width: 364px;
+  width: 262px;
   margin-left: 30px;
-  margin-top: 30px;
+  margin-top: 26px;
   margin-bottom: 30px;
-  margin-right: 287px;
+  margin-right: 300px;
 }
 
-.hotel-selected-info h3 {
+.hotel-selected-name {
+  display:inline-block;
   margin:0;
+  padding: 0;
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
   color: #000000;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.hotel-selected-name:hover {
+  color: #82b4d2;  
+}
+
+.hotel-selected-name:active {
+  color: #b2b2b2;  
 }
 
 .hotel-selected-info p {
@@ -1222,14 +1233,15 @@ body{
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+  margin-bottom: 17px;
 }
 
 .btn-more {
   width: 110px;
   padding-left: 17px;
   padding-right: 19px;
-  padding-top: 5px;
-  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-bottom: 5px;
   margin-right: 6px;
   
   font-weight: 700;
@@ -1244,14 +1256,18 @@ body{
   background-color: #669ec0;
 }
 
+.btn-more:active{
+  background-color: #5496bd;
+  color: #86b5d0;
+}
+
 .btn-reservation {
   width: 142px;
   padding-left: 17px;
   padding-right: 17px;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  margin-right: 6px;
-   
+  padding-top: 4px;
+  padding-bottom: 5px;
+     
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -1264,45 +1280,33 @@ body{
   background-color: #604e43;
 } 
 
+.btn-reservation:active {
+  background-color: #503e33;
+  color:#796c64;
+} 
+
 .raiting-star {
-  position: relative;
   float: right;
-  width: 240px;
+   width: 240px;
+  min-height: 100px;
   font-size: 14px;
   line-height: 21px;
-  
-  
-  
-}
-.raiting-star p {
-  margin-top: 93px;
-  margin-left: 132px;
-    
-}
-/*.raiting-star::after {
-  position: absolute;
-  content: "";
-  width: 111px;
-  height: 27px;
-  left: 132px;
-  top: 93px;
-  background: #f2f2f2;
-  z-index: 1;
-} */
+  padding-right: 1px;
+} 
+
 
 /*-------------------футер вложенной страницы---------------- */
-
-.inner-footer{
-  width: 1200px;
-  
-}
 
 .inner-footer-content {
   width: 1200px;
   color: #000000;
   text-align: center;
-  width: 1200px;
-} 
+ } 
+
+. inner-footer-content a{
+  color: #000000; 
+  text-decoration: none;
+}
 
 .inner-footer-inst {
   float: left;
@@ -1320,7 +1324,6 @@ body{
   text-align: center;
   margin-top: 36px;
   margin-bottom: 36px;
- 
 }
 
 .inner-footer-copyright{
@@ -1330,26 +1333,20 @@ body{
   font-size: 14px;
   line-height: 26px;
   margin-top: 40px;
-  
-};
+}
 
-.academy-logotip {
+.inner-footer-copyright a{
   display: inline-block;
   vertical-align: middle;
-  width: 113px;
-  height: 39px;
-  background: url("../img/academy.png") no-repeat;
-  
 }
 
 .inner-footer-content a{
   color: #000000; 
   text-decoration: none;
+  
 }
 
-.inner-footer-copyright a{
-  vertical-align: middle;
-}
+
 
 
 /*----------- sprite -----------------------------------*/
