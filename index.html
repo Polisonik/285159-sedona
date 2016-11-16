@@ -2,11 +2,175 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>SEDONA</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css" href="css/normalize.css"> 
   </head>
+  
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <div class="container"> 
+      <header class="main-header">
+        <nav class="main-navigation">
+          <ul>
+            <li class="active">
+              <a href="#"> Информация </a>
+            </li>
+            <li class="active">
+              <a href="#">Фото и видео</a>
+            </li>
+            <li class="active" >
+              <a href="#">Карта штата</a>
+            </li>
+            <li class="active">
+              <a href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      
+        <div class="logo-image">
+          <a href="index.html">
+            <img src="img/logo.png" width="138px" height="" alt="логотип" >
+          </a>  
+        </div>  
+      </header>
+   
+   
+      <main class="main-content"> 
+        <div class="greeting">
+          <div class="greeting-img"> 
+            <img src="img/welcome.png" width="458" height="352" alt="Welcome to SEDONA">
+          </div>  
+        </div>  
+         
+        <div class="greeting-tagline">
+          <h2>Cедона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p>Рассмотрим 5 причин, ко которым Седона круче, чем Гранд Каньон</p>
+        </div>
+        
+                    
+        <div class="features clearfix">
+          <div class="features-content">
+            <h3>Настоящий  городок</h3>
+            <span>- №1-</span> 
+            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+          </div>    
+          <div class="features-image">
+            <img src="img/city.jpg" width="800" height="256" alt="Настоящий городок">
+          </div>      
+        </div>
+        
+      
+        <div class="attribute clearfix">
+          <div class="attribute-icon">
+            <div class="attribute-icon-image">
+              <img src="img/building.png" width="75" height="72" alt="здание">
+            </div>
+            <h3 class="attribute-name">Жилье</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </div>  
+        
+          <div class="attribute-icon">
+            <div class="attribute-icon-image">
+              <img src="img/burger.png" width="74" height="70" alt="бургер">
+            </div>  
+            <h3 class="attribute-name">Еда</h3>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </div> 
+        
+          <div class="attribute-icon">
+            <div class="attribute-icon-image">
+              <img src="img/souvenir.png" width="64" height="76" alt="сувениры">
+            </div>  
+            <h3 class="attribute-name">Cувениры</h3>
+            <p>Не только китайского, но и местного производства!</p>
+          </div> 
+        </div>
+        
+        <div class="features clearfix">
+          <div class="features-image">
+            <img src="img/bridge.jpg" width="800" height="256" alt="Мост">       
+          </div>
+          <div class="features-content">   
+            <h3>Там есть мост дьявола</h3>
+            <span>- №2-</span> 
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p> 
+          </div>
+        </div>
+      
+        <div class="advantage clearfix">
+          <div class="advantage-text">
+            <h3>Небольшая площадь</h3>
+            <span>-№3-</span> 
+            <p>Все достопримечательности находятся очень близко</p>
+          </div>
+          
+          <div class="advantage-text">
+            <h3>Красивая дорога</h3>
+            <span>-№4-</span> 
+            <p>Ехать в Седону из Лас-Вегаса совсем не сучно!</p>
+          </div>  
+           
+          <div class="advantage-text">
+            <h3>Мало туристов</h3>
+              <span>-№5-</span> 
+              <p>Большинство едет в Гранд Каньон и толпится там</p> 
+          </div>  
+        </div>  
+        
+  
+        <div class="search">
+          <h2>Заинтересовались?</h2>
+          <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a class="btn" href="#">Поиск гостиницы в Седоне</a> 
+          <div class="modal-window">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="search-form-arrival">
+                <label for="data arrival">Дата заезда</label>
+                <input id="data arrival" type="text" name="arrival date" value="24 апреля 2016"> 
+              </div>              
+              <div class="search-form-departure">
+                <label for="data departure">Дата выезда</label>
+                <input id="data departure" type="text" name="departure date"  value="4 июля 2016"> 
+                </div> 
+                <div class="clearfix">             
+                  <div class="search-form-adult">
+                    <label for="adult-number">Взрослые</label>
+                    <input id="adult-number" type="text" name="adult" value="2"> 
+                  </div>
+                  <div class="search-form-children clearfix">  
+                    <label for="children-number">Дети</label>
+                    <input id="children-number" type="text" name="children" value="0"> 
+                  </div>
+                  <button class ="btn btn-search" type="btn">Найти</button>
+                </div>
+            </form>
+          </div>    
+        </div>
+        
+      </main>
+      
+      
+      <footer class="main-footer clearfix">
+        <div class="footer-map">
+           <img src="img/map.jpg" width="1200" height="593" alt="карта">
+        </div>
+        <div class="footer-content clearfix">
+          <div class="footer-inst">
+            <a class="instagram" href="#">#visitsedona</a>
+          </div>
+          <div class="footer-social">
+            <a class="social-btn social-btn-tw" href="#">Twitter</a>
+            <a class="social-btn social-btn-fb" >Facebook</a> 
+            <a class="social-btn social-btn-yt" href="#">YT</a> 
+          </div>
+          <div class="footer-copyright">
+            <a class="text-by" href="#">website by</a>
+            <a class="academy-logotip" href="#"></a>
+          </div>
+        </div>  
+      </footer>
+      
+    </div>
   </body>
 </html>
