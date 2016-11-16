@@ -45,13 +45,13 @@
                 <ul> 
                   <li>
                     <label class="pool-checkbox">
-                      <input type="checkbox" name="pool">
+                      <input type="checkbox" name="pool"  >
                       <span class="checkbox-indicator"></span>бассейн
                     </label>
                   </li>    
                   <li>
                     <label class="parking-checkbox">
-                      <input type="checkbox" name="parking">
+                      <input type="checkbox" name="parking" disabled checked>
                       <span class="checkbox-indicator"></span>парковка
                     </label>
                   </li>
@@ -85,7 +85,7 @@
                   </li>
                   <li>  
                     <label class="apartments-checkbox">
-                      <input type="checkbox" name="apartments">
+                      <input type="checkbox" name="apartments" >
                       <span class="checkbox-indicator"></span> 
                       апартаменты
                     </label>
@@ -122,13 +122,13 @@
           <div class="sorting-result">
               <ul>
                 <li>
-                  <a href="#">по цене</a>
+                  <a class="by-price" href="#">по цене</a>
                 </li>
                 <li>
-                  <a href="#">по типу</a>
+                  <a сlass="by-type" href="#">по типу</a>
                 </li>
                 <li>
-                  <a href="#">по рейтингу</a>
+                  <a class="by-rating" href="#">по рейтингу</a>
                 </li>
               </ul>    
           </div>
@@ -145,22 +145,23 @@
           </div>
           <div class="hotel-selected-info">   
             <a class="hotel-selected-name" href="#">amara resort & SPA</a>
-            <span>Гостиница</span> <span>от 3500 р.</span>
+            <div class="text-info">
+              <span>гостиница</span><span>от 3500 р.</span>
+            </div>
             <a class="btn btn-more" href="#">Подробнее</a>
             <a class="btn btn-reservation" href="#">Забронировать</a>
           </div>  
           <div class="rating">
-            <div class="rating-srar">           
+            <div class="rating-stars">           
               <span class="star">&#9733;</span>
               <span class="star">&#9733;</span>
               <span class="star">&#9733;</span>
               <span class="star">&#9733;</span>
             </div>  
-            <div class="rating-content">
-              <div>рейтинг: 8,5</div>
-            
+            <div class="rating-text">
+              <p>рейтинг: 8,5</p>
             </div>  
-          </div>
+          </div>  
         </div>
     
         <div class="hotel-selected clearfix">
@@ -169,15 +170,19 @@
           </div>  
           <div class="hotel-selected-info"> 
             <a class="hotel-selected-name" href="#">desert quail inn</a>
-            <p>мотель от 2000 р.</p>
+            <div class="text-info">
+              <span>мотель</span><span>от 2000 р.</span>
+            </div>
             <a class="btn btn-more" href="#">Подробнее</a>
             <a class="btn btn-reservation" href="#">Забронировать</a>
           </div>
-          <div class="rating-star">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <div class="rating-background">
-              <p> рейтинг: 8,9</p>
+          <div class="rating">
+            <div class="rating-stars"> 
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>  
+            <div class="rating-text">
+              <p>рейтинг: 8,9</p>
             </div>  
           </div>
         </div>
@@ -188,19 +193,24 @@
           </div> 
           <div class="hotel-selected-info">  
             <a class="hotel-selected-name" href="">villas at poco diablo</a>
-            <p>Апартаменты от 4000 р.</p>
+            <div class="text-info">
+              <span>апартаменты</span><span>от 4000 р.</span>
+            </div>
             <a class="btn btn-more" href="#">Подробнее</a>
             <a class="btn btn-reservation" href="#">Забронировать</a>
           </div>  
-          <div class="rating-star">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            
+          <div class="rating">
+            <div class="rating-stars"> 
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <div class="rating-text"> 
               <p>рейтинг: 9,2</p> 
-            
+            </div>
           </div>
         </div>
+        
       </main>
     
     <footer class="inner-footer clearfix">
