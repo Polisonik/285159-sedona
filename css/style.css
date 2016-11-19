@@ -342,6 +342,7 @@ body{
 }
 
 .modal-window {
+  display: none;
   position: absolute;  
   width: 568px;
   left: 316px;
@@ -356,6 +357,10 @@ body{
   color: #000000;
   text-transform: uppercase;
   z-index: 20;
+}
+
+.modal-window-show {
+  display: block;
 }
 
 .modal-window input{
@@ -1429,8 +1434,8 @@ body{
   margin-right: 30px;
   
 }
-. sorting-result li:last-child {
-  margin-right: 0px;  
+.sorting-result li:last-of-type {
+  margin-right: 0;  
 }
 
 .sorting-result a {
@@ -1690,7 +1695,7 @@ body{
   text-align: center;
  } 
 
-. inner-footer-content a{
+.inner-footer-content a{
   color: #000000; 
   text-decoration: none;
 }
