@@ -350,7 +350,7 @@ body{
 }
 
 .modal-window {
-  display: block;
+  display: none;
   position: absolute;  
   width: 568px;
   left: 316px;
@@ -368,8 +368,8 @@ body{
   animation: appearance 0.6s; 
 }
 
-.modal-window-close {
-  display: none;
+.modal-window-show {
+  display: block;
   animation: appearance;
   animation: appearance 0.6s;
 }
@@ -448,7 +448,7 @@ body{
   display: inline-block;
   position: relative;
   
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   margin-right: 54px;
   margin-left: 2px;
 }
@@ -494,15 +494,23 @@ body{
 /*--------------------- поле ввода "взрослые"---*/
 .search-form-adult {
   display: inline-block;
-  vertical-align: top; 
-  text-align: center;
+  vertical-align: middle; 
+  margin-left: 0px;
+  margin-right: 51px;
+  margin-bottom: 52px;
+} 
+
+.search-form-adult label {
+  margin-left: 3px;
+  margin-right: 39px;
 }
 
 .wrapper-adult{
   display: inline-block;
-  position: relative;
-  margin-right: 50px;
-  margin-left: 3px;
+  vertical-align: middle;
+  width: 114px;
+  background: #f2f2f2;
+  margin-left: -1px;
 }
 
 .btn-count {
@@ -523,100 +531,133 @@ body{
 }
 
 .minus-adult {
-  display: inline-block;
-  position:absolute;
-  top: 3px;
-  left:8px;
-  width: 24px;
-  height: 22px;
-  padding-bottom: 5px;
+  float: left;
+  background: transparent;
+  border: none;
+  width: 38px;
+  height: 38px;
+  padding-bottom: 7px;
 }
-
 .plus-adult {
-  display: inline-block;
-  position:absolute;
-  top: 6px;
-  right: 10px;
-  width: 22px;
-  height: 22px;
+  float: left;
+  background: transparent;
+  border: none;
+  width: 38px;
+  height: 38px;
 }
 
 .adult{
   box-sizing: border-box;
-  width: 115px;
-  padding-top: 5px;
-  padding-bottom: 4px;
-  padding-left: 52px;
-  padding-right: 48px;
+  width: 38px;
+  height: 38px;
+  float: left;
+  background-color: transparent;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  padding-left: 14px;
+  padding-right: 0px; 
 }
   
-.search-form-adult label {
-  margin-left: 26px;
-  margin-right: 35px;
+.wrapper-adult:hover {
+  background-color:  #ebebeb;
 }
 
-.wrapper-adult:hover .btn-count {
+.minus-adult:hover {
   background-color: #ebebeb;
   color: #000000;
 }
 
-.adult:focus~ .btn-count{
+.plus-adult:hover {
+  background-color: #ebebeb;
+  color: #000000;
+}
+
+.adult:focus {
+  outline: none;
+  background: #ffffff;
+}
+
+.minus-adult:active {
   background:#ffffff;
   color: #81b3d2;
 }
 
-.minus-children {
-  display: inline-block;
-  position:absolute;
-  top: 3px;
-  left:8px;
-  width: 24px;
-  height: 22px;
-  padding-bottom: 5px;
-}
-
-.plus-children {
-  display: inline-block;
-  position:absolute;
-  top: 6px;
-  right: 10px;
-  width: 22px;
-  height: 22px;
+.plus-adult:active {
+  background:#ffffff;
+  color: #81b3d2;
 }
 
 .search-form-children {
   display: inline-block;
-  vertical-align: top;  
-  text-align: center;
+  vertical-align: middle; 
+  margin-bottom: 52px;
 }
 
 .wrapper-children{
   display: inline-block;
-  position: relative;
-  margin-bottom: 54px;
-  margin-right: 24px;
-  margin-left: -1px;
+  vertical-align: middle;
+  width: 114px;
+  background: #f2f2f2;
+  margin-bottom: 0px;
+  margin-right: 1px;
+  margin-left: 6px; 
 }
-  
+
 .children {
+  float: left;
   box-sizing: border-box;
-  width: 115px;
-  padding-top: 5px;
-  padding-left: 51px;
+  width: 38px;
+  height: 38px;
+  padding-left: 12px;
   padding-bottom: 3px;
-  padding-right: 34px;
+}
+
+.minus-children {
+  float: left;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  padding-bottom: 7px;
+}
+
+.plus-children {
+  float: right;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
 }
   
 .search-form-children label {
-  margin-right: 24px;
+  margin-right: 18px;
 }
 
-.wrapper-children:hover .btn-count {
+.wrapper-children:hover {
+  background-color:  #ebebeb;
+}
+
+.minus-children:hover {
   background-color: #ebebeb;
   color: #000000;
 }
 
-.children:focus ~ .btn-count{
+.plus-children:hover {
+  background-color: #ebebeb;
+  color: #000000;
+}
+
+.children:focus {
+  outline: none;
+  background: #ffffff;
+}
+
+.minus-children:active {
+  background:#ffffff;
+  color: #81b3d2;
+}
+
+.plus-children:active {
   background:#ffffff;
   color: #81b3d2;
 }
