@@ -8,7 +8,7 @@ body{
   line-height: 21px;
   font-family: "PT Sans", "Arail", sans-serif;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f2f2f2;;
   
   text-transform: uppercase;
   
@@ -25,7 +25,8 @@ body{
   margin-left: auto;
   margin-right: auto; 
   width: 1200px;  
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 * img{
@@ -336,9 +337,16 @@ body{
   text-decoration: none;
   
   background-color: #766357;
-  
+    
   border: none;
   cursor: pointer;
+}
+
+@keyframes appearance {
+  0% {transform: translateY(10000px); }
+  70% {transform: translateY(30px);   }
+  90% {transform: translateY(-10px);  }
+  100% {transform: translateY(0);     }
 }
 
 .modal-window {
@@ -357,10 +365,13 @@ body{
   color: #000000;
   text-transform: uppercase;
   z-index: 20;
+  animation: appearance 0.6s; 
 }
 
 .modal-window-show {
   display: block;
+  animation: appearance;
+  animation: appearance 0.6s;
 }
 
 .modal-window input{
@@ -374,6 +385,11 @@ body{
   color: #000000;
   text-transform: uppercase;
 }
+.modal-window input:hover {
+  background: #ebebeb;
+  border: 2px solid #e5e5e5;
+  outline: none;
+}
 
 .modal-window input:focus {
   background: #ffffff;
@@ -381,36 +397,46 @@ body{
   outline: none;
 }
 
-.search-form-arrival input{
+.wrapper-arrival{
+  display: inline-block;
+  position: relative;
+  margin-top: 55px;
+  margin-bottom: 29px;
+  margin-right: 45px;
+  margin-left: -1px;
+}
+
+.arrival{
   box-sizing: border-box;
   width: 346px;
   padding-left: 14px;
   padding-right: 42px;
   padding-top: 6px;
   padding-bottom: 3px; 
-  
-  margin-top: 55px;
-  margin-bottom: 29px;
-  margin-right: 45px;
-  margin-left: -1px;
-    
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  background-position:  102% 0px; 
 }  
 
-.search-form-arrival input:focus{ 
-  background-image: url("../img/sprite.png");
+.calendar-arrival {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/calendar.png");
   background-repeat: no-repeat;
-  background-position:  102% -38px; 
+  background-position: 50% 50%; 
+ }
+
+.arrival:hover {
+  background-color: #ebebeb; 
 }
 
-.search-form-arrival input:hover {
-  background-color: #ebebeb;
-  
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  background-position:  102% -76px;
+.wrapper-arrival:hover .calendar-arrival {
+  background-image:url("../img/calendarh.png")
+}
+
+.arrival:focus ~ .calendar-arrival{ 
+  background-image:url("../img/calendarf.png")
 }
 
 .search-form-arrival label{  
@@ -418,108 +444,222 @@ body{
   margin-right: 18px;
  }
 
-.search-form-departure input{
+.wrapper-departure{
+  display: inline-block;
+  position: relative;
+  
+  margin-bottom: 31px;
+  margin-right: 54px;
+  margin-left: 2px;
+}
+
+.departure{
   box-sizing: border-box;
   width: 346px;
   padding-left: 11px;
   padding-right: 42px;
   padding-top: 6px;
   padding-bottom: 4px; 
-  
-  margin-bottom: 30px;
-  margin-right: 54px;
-  margin-left: 2px;
-  
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  background-position:  102% 0px;
 }
 
-.search-form-departure input:focus {
-  background-image: url("../img/sprite.png");
+.calendar-departure{
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/calendar.png");
   background-repeat: no-repeat;
-  background-position:  102% -38px; 
+  background-position: 50% 50%; 
 }
 
-.search-form-departure input:hover {
+.departure:hover {
   background-color: #ebebeb; 
-  
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  background-position:  102% -76px;
+}
+
+.wrapper-departure:hover .calendar-departure {
+  background-image:url("../img/calendarh.png")
+}
+
+.departure:focus ~ .calendar-departure{ 
+  background-image:url("../img/calendarf.png")
 }
 
 .search-form-departure label {
-  margin-right: 14px;
+  margin-right: 13px;
   margin-left: 56px;
 }
 
 /*--------------------- поле ввода "взрослые"---*/
 .search-form-adult {
   display: inline-block;
-  vertical-align: top; 
-  text-align: center;
+  vertical-align: middle; 
+  margin-left: 0px;
+  margin-right: 51px;
+  margin-bottom: 52px;
+} 
+
+.search-form-adult label {
+  margin-left: 3px;
+  margin-right: 39px;
 }
 
-.search-form-adult input{
+.wrapper-adult{
+  display: inline-block;
+  vertical-align: middle;
+  width: 114px;
+  background: #f2f2f2;
+  margin-left: -1px;
+}
+
+.btn-count {
+  display: inline-block;
   box-sizing: border-box;
-  width: 115px;
-  padding-top: 5px;
-  padding-bottom: 4px;
-  padding-left: 52px;
-  padding-right: 48px;
-  margin-right: 50px;
-  margin-left: 3px;
-  background: url("../img/minus.png") no-repeat  12px 17px,
-              url("../img/plus.png") no-repeat  88px 13px #f2f2f2;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  border:none; 
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  border: none;
+  background-color:transparent;
+  color:#a9a9a9;
+  outline: none;
+}
+
+.minus-adult {
+  float: left;
+  background: transparent;
+  border: none;
+  width: 38px;
+  height: 38px;
+  padding-bottom: 7px;
+}
+.plus-adult {
+  float: left;
+  background: transparent;
+  border: none;
+  width: 38px;
+  height: 38px;
+}
+
+.adult{
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  float: left;
+  background-color: transparent;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  padding-left: 14px;
+  padding-right: 0px; 
 }
   
-.search-form-adult label {
-  margin-left: 26px;
-  margin-right: 35px;
+.wrapper-adult:hover {
+  background-color:  #ebebeb;
 }
 
-.search-form-adult input:hover {
-  background: url("../img/minushvr.png") no-repeat  12px 17px,
-              url("../img/plushvr.png") no-repeat  87px 13px #ebebeb;
+.minus-adult:hover {
+  background-color: #ebebeb;
+  color: #000000;
 }
 
-.search-form-adult input:focus {
-  background: url("../img/minusactiv.png") no-repeat  12px 17px,
-              url("../img/plusactiv.png") no-repeat  87px 13px #ffffff;
+.plus-adult:hover {
+  background-color: #ebebeb;
+  color: #000000;
 }
 
+.adult:focus {
+  outline: none;
+  background: #ffffff;
+}
+
+.minus-adult:active {
+  background:#ffffff;
+  color: #81b3d2;
+}
+
+.plus-adult:active {
+  background:#ffffff;
+  color: #81b3d2;
+}
 
 .search-form-children {
   display: inline-block;
-  vertical-align: top;  
-  text-align: center;
-}
-  
-.search-form-children input {
-  box-sizing: border-box;
-  width: 115px;
-  padding-top: 5px;
-  padding-left: 51px;
-  padding-bottom: 3px;
-  padding-right: 34px;
-  margin-bottom: 54px;
-  margin-right: 24px;
-  margin-left: -1px;
-  background: url("../img/minus.png") no-repeat  11px 17px,
-              url("../img/plus.png") no-repeat  88px 12px #f2f2f2;
+  vertical-align: middle; 
+  margin-bottom: 52px;
 }
 
-.search-form-children label {
-  margin-right: 24px;
+.wrapper-children{
+  display: inline-block;
+  vertical-align: middle;
+  width: 114px;
+  background: #f2f2f2;
+  margin-bottom: 0px;
+  margin-right: 1px;
+  margin-left: 6px; 
 }
-.search-form-children input:hover {
-  background: url("../img/minushvr.png") no-repeat  11px 17px,
-              url("../img/plushvr.png") no-repeat  88px 12px #ebebeb;
-  }
- .search-form-children input:focus {
-  background: url("../img/minusactiv.png") no-repeat  11px 17px,
-              url("../img/plusactiv.png") no-repeat  88px 12px #ffffff; 
+
+.children {
+  float: left;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  padding-left: 12px;
+  padding-bottom: 3px;
+}
+
+.minus-children {
+  float: left;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  padding-bottom: 7px;
+}
+
+.plus-children {
+  float: right;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+}
+  
+.search-form-children label {
+  margin-right: 18px;
+}
+
+.wrapper-children:hover {
+  background-color:  #ebebeb;
+}
+
+.minus-children:hover {
+  background-color: #ebebeb;
+  color: #000000;
+}
+
+.plus-children:hover {
+  background-color: #ebebeb;
+  color: #000000;
+}
+
+.children:focus {
+  outline: none;
+  background: #ffffff;
+}
+
+.minus-children:active {
+  background:#ffffff;
+  color: #81b3d2;
+}
+
+.plus-children:active {
+  background:#ffffff;
+  color: #81b3d2;
 }
 
 .btn-search{
@@ -535,7 +675,6 @@ body{
   margin-left: 56px;
   margin-right:55px;
   margin-bottom: 54px;
-  
 }
  
 .btn-search:hover {
@@ -575,7 +714,8 @@ body{
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin-top: 46px;
+  margin-top: 45px;
+  
 }
 
 .footer-social {
@@ -597,7 +737,7 @@ body{
 .footer-copyright a{
   display: inline-block;
   vertical-align: middle;
-  margin-top: 40px;
+  margin-top: 41px;
 }
 
 .academy-logotip {
@@ -1150,8 +1290,6 @@ body{
   background-position: -8px -268px;
 }   
 
-
-
 .apartments-checkbox input[type="checkbox"] {
   display: none;
 }
@@ -1488,7 +1626,7 @@ body{
   display: inline-block;
   vertical-align: top;
   margin-top: 36px;
-  margin-left: 42px;
+  margin-left: 72px;
 }
 
 .sorting-result-direction a{
@@ -1664,9 +1802,9 @@ body{
 .rating-stars span{
   display: inline-block;
   vertical-align: top;
-  font-size: 24px;
-  line-height: 21px;
-  margin-left: 0px; 
+  font-size: 22px;
+  line-height: 22px;
+  margin-left: 1px; 
   }
 
 .rating-text p{
@@ -1682,8 +1820,8 @@ body{
  }
 
 .star {
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 22px;
+  line-height: 22px;
   color: #81b3d2;
 }
 
