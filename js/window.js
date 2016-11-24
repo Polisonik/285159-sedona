@@ -4,6 +4,6 @@
 
   link.addEventListener("click", function(event){
     event.preventDefault();
-    popup.classList.toggle("modal-window-show");
+    popup.classList.toggle("modal-window-close");
   });
  
